@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle de Irrigação</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Sistema de Controle de Irrigação</h1>
+    </header>
+    <section class="status">
+        <h2>Status do Sistema</h2>
+        <p>Atualmente, a irrigação está <span class="status-on">Ativa</span>.</p>
+    </section>
+    <section class="controls">
+        <h2>Controle</h2>
+        <button id="startBtn">Iniciar Irrigação</button>
+        <button id="stopBtn">Parar Irrigação</button>
+    </section>
+    <script>
+        // Script simples para controle dos botões
+        const statusText = document.querySelector('.status p span');
+        document.getElementById('startBtn').addEventListener('click', () => {
+            statusText.textContent = 'Ativa';
+            statusText.className = 'status-on';
+        });
+        document.getElementById('stopBtn').addEventListener('click', () => {
+            statusText.textContent = 'Parada';
+            statusText.className = 'status-off';
+        });
+    </script>
+</body>
+</html>
