@@ -1,35 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Controle de Irrigação</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de Irrigação</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Sistema de Controle de Irrigação</h1>
+        <h1>Projeto Agrinho festejando a conexao campo-cidade</h1>
+        <p>Explore as diferentes modalidades de irrigação com cores representativas e descubra como cada tipo pode ser utilizado.</p>
     </header>
-    <section class="status">
-        <h2>Status do Sistema</h2>
-        <p>Atualmente, a irrigação está <span class="status-on">Ativa</span>.</p>
-    </section>
-    <section class="controls">
-        <h2>Controle</h2>
-        <button id="startBtn">Iniciar Irrigação</button>
-        <button id="stopBtn">Parar Irrigação</button>
-    </section>
-    <script>
-        // Script simples para controle dos botões
-        const statusText = document.querySelector('.status p span');
-        document.getElementById('startBtn').addEventListener('click', () => {
-            statusText.textContent = 'Ativa';
-            statusText.className = 'status-on';
-        });
-        document.getElementById('stopBtn').addEventListener('click', () => {
-            statusText.textContent = 'Parada';
-            statusText.className = 'status-off';
-        });
-    </script>
+
+    <div class="container">
+        <div class="modalidade" id="gotejamento">
+            <h2>Irrigação por Gotejamento</h2>
+            <p>Ideal para plantas específicas, com baixo consumo de água. A água é liberada diretamente na base das plantas, promovendo eficiência no uso dos recursos hídricos.</p>
+            <h3>Vantagens:</h3>
+            <ul>
+                <li>Economia de água</li>
+                <li>Alta precisão</li>
+                <li>Menos impacto no solo</li>
+            </ul>
+            <h3>Desvantagens:</h3>
+            <ul>
+                <li>Manutenção constante</li>
+                <li>Custo inicial mais alto</li>
+            </ul>
+        </div>
+
+        <div class="modalidade" id="aspersao">
+            <h2>Irrigação por Aspersão</h2>
+            <p>Simula a chuva e distribui a água de maneira uniforme por meio de sprinklers. Ideal para grandes áreas, como campos de esportes e gramados.</p>
+            <h3>Vantagens:</h3>
+            <ul>
+                <li>Cobre grandes áreas</li>
+                <li>Simula chuva, favorecendo plantas sensíveis</li>
+                <li>Fácil de instalar</li>
+            </ul>
+            <h3>Desvantagens:</h3>
+            <ul>
+                <li>Maior evaporação em climas quentes</li>
+                <li>Distribuição imprecisa</li>
+            </ul>
+        </div>
+
+        <div class="modalidade" id="sulcos">
+            <h2>Irrigação por Sulcos</h2>
+            <p>A água flui por sulcos ou canais ao longo das plantas, sendo ideal para grandes áreas agrícolas, como plantações de grãos e hortas.</p>
+            <h3>Vantagens:</h3>
+            <ul>
+                <li>Custo inicial baixo</li>
+                <li>Fácil aplicação em grandes áreas</li>
+                <li>Ideal para solos profundos</li>
+            </ul>
+            <h3>Desvantagens:</h3>
+            <ul>
+                <li>Perda de água por evaporação</li>
+                <li>Requer manutenção regular</li>
+                <li>Não eficiente em solos leves</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>Sistema de Irrigação</p>
+    </footer>
 </body>
 </html>
+
